@@ -1,0 +1,33 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements.txt  —  YOLO Real-Time Object Detector
+# Verified working: Python 3.13.1 · Windows 11 · CPU
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# ── CPU install (all platforms) ──────────────────────────────────────────────
+#   pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+#
+# ── NVIDIA GPU (CUDA 12.1) ───────────────────────────────────────────────────
+#   pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements.txt
+#
+# ── Apple Silicon MPS ────────────────────────────────────────────────────────
+#   pip install torch==2.6.0 torchvision==0.21.0
+#   pip install -r requirements.txt
+#
+# IMPORTANT: Always install torch/torchvision BEFORE this file.
+# Using the default PyPI torch wheel on Windows causes DLL failures.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Core inference engine — YOLO11 / YOLOv8 / YOLOv5 support
+ultralytics==8.4.177
+
+# PyTorch backend (installed separately — see header above)
+torch>=2.6.0
+torchvision>=0.21.0
+
+# Computer-vision I/O and rendering
+opencv-python==5.0.0.93
+
+# Numerical computing (auto-installed by torchvision, listed for clarity)
+numpy>=2.0.0
